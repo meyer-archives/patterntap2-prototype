@@ -1,0 +1,231 @@
+!!! 5
+
+/[if lt IE 7 ] <html lang="en" class="no-js ie6">
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+%head
+	%meta{:charset=>"utf-8"}
+	%meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+
+	%title Home &rsaquo; PatternTap
+	%meta{:name=>"description", :content=>""}
+	%meta{:name=>"author", :content=>""}
+
+	%meta{:name=>"viewport", :content=>"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"}
+	%meta{:name=>"format-detection", :content=>"telephone=no"}
+
+	%link{:rel=>"stylesheet", :href=>"css/style.css"}
+	%script{:src=>"js/modernizr-1.6.min.js"}
+
+	/ Typekit (obviously)
+	%script{:src=>"http://use.typekit.com/nlx8pod.js"}
+	%script try{Typekit.load();}catch(e){}
+
+%body
+	#wrapper
+		%header#pt-header
+			.container
+				%h1#pt-logo
+					%a{:href=>"#"} PatternTap
+				%nav#browse-menu
+					%ul
+						%li.has-menu
+							%a{:href=>"#"} Tags
+							/
+								%ul
+									%li
+										%h2
+											Popular
+											%span Types
+									%li
+										%h2
+											Popular
+											%span Styles
+									%li
+										%h2
+											Popular
+											%span Platforms
+									%li
+										%h2
+											Popular
+											%span User Tags
+						%li
+							%a(href="#") People
+
+				%form{:action=>"#", :method=>"post"}
+					/ input:search has a weird webkit-specific padding issue
+					%input{:type=>"text", :name=>"q", :value=>"", :placeholder=>"Search"}
+					%button{:type=>"submit"} Search
+
+				%nav#user-options
+					%a#profile-menu{:href=>"#"}
+						.avatar-small
+							%img.photo{:src=>"images/avatar-generic.png"}
+							View your profile
+
+					%a{:href=>"#"} Upload
+					%a{:href=>"#"} Organize
+					%a{:href=>"#"} Sign Out
+
+		#content
+			.container
+				#primary
+					%header#page-header
+						%h1
+							Tags
+							%span.sep /
+							%a{:href=>"#"} Typography
+						%nav.filter-menu
+							%a{:href=>"#"} Recent
+							%a.current{:href=>"#"} Popular
+							%a{:href=>"#"} Comments
+							%a{:href=>"#"} Redesigns
+						%details
+							%summary
+								%b 320
+								images
+
+					%section#patterns
+						%ul
+							%li.vcard
+								%img(src="images/pattern1.png")
+								%article
+									%header
+										%h1 Well Styled Column List of Pricing Chart with Great Icons from High Performance.
+										%address
+											%a{:href=>"#"}
+												.avatar-small
+													%img.photo(src="images/avatar-generic.png" alt="Your avatar")
+												%span.n.fn Matthew Smith
+									%footer
+										%ul.options
+											%li.favs
+												%a{:href=>"#"}
+													999
+													%span likes
+											%li.comments
+												%a
+													100
+													%span comments
+
+					%footer
+						%details
+							%summary
+								%b 320
+								images
+
+						%nav.pagination
+							%a.prev-link{:href=>"#"} Prev
+							%span.numbers
+								%a{:href=>"#"} 1
+								%a{:href=>"#"} 2
+								%a.current{:href=>"#"} 3
+								%a{:href=>"#"} 4
+								%a{:href=>"#"} 5
+								%a{:href=>"#"} 6
+								%span.ellipsis &hellip;
+								%a{:href=>"#"} 16
+								%a{:href=>"#"} 17
+								%a{:href=>"#"} 18
+							%a.next-link{:href=>"#"} Next
+
+				#secondary
+					%section.tag-list
+						%header
+							%h1 Popular Tags
+						%nav
+							%a{:href=>"#"} Navigation
+							%a{:href=>"#"} Headings
+							%a{:href=>"#"} Icons
+							%a{:href=>"#"} Graphic Illustration
+							%a{:href=>"#"} Articles
+							%a{:href=>"#"} Icons
+							%a{:href=>"#"} Sub-navigation
+							%a{:href=>"#"} Navigation
+							%a{:href=>"#"} Headings
+							%a{:href=>"#"} Icons
+							%a{:href=>"#"} Graphic Illustration
+							%a{:href=>"#"} Articles
+							%a{:href=>"#"} Icons
+							%a{:href=>"#"} Sub-navigation
+							%a{:href=>"#"} Navigation
+							%a{:href=>"#"} Headings
+							%a{:href=>"#"} Icons
+
+					/ Ad
+					%section.link-list
+						%header
+							%h1 Related Typography Articles
+						%ul
+							%li
+								%p Only for show. He who searches for meaning here will be sorely.
+								%a{:href=>"#"} somewherelongish.com/primary-section/secondary-section/tertiary.html?tldr=true
+
+					%section.related-resources
+						%header
+							%h1 Related Resources
+						%ul
+							%li
+								%img
+								%h2 Contact &mdash; Old Wooden Letterpress Type
+								%h3 by <b>Marek Uliasz</b>
+								%a{:href=>"#"} Available <i>at</i> Veer
+
+							%li
+								%img
+								%h2 Piel Script
+								%h3 by <b>Umbrella Type</b>
+								%a{:href=>"#"} Available <i>at</i> Veer
+
+					%section.good-reads
+						%header
+							%h1 Recommended Reading
+						%ul
+							%li
+								%img
+								%p The HTML5 spec is 900 pages and hard to read. <i>HTML5 for Web Designers</i> is 85 pages and fun to read. Easy choice.
+								%p.actions
+									<a href="#">Read More</a> or <a href="#">Buy Now</a>
+
+					%section.link-list
+						%header
+							%h1 From the Blog
+							%article
+								%p Only for show. He who searches for meaning here will be sorely.
+								%a{:href=>"#"} somewherelongish.com/primary-section/secondary-section/tertiary.html?tldr=true
+
+					%a#take-the-tour{:href=>"#"} Take the Pattern Tap Tour
+
+		%footer
+			%div.container
+				%nav
+					%a{:href=>"#"} Home
+					%a{:href=>"#"} About
+					%a{:href=>"#"} Blog
+					%a{:href=>"#"} Support
+					%a{:href=>"#"} Connections
+					%a{:href=>"#"} Contact
+				%a{:href => "http://twitter.com/patterntap"} Pattern Tap on Twitter
+
+	%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"}
+
+	%script{:src => "js/plugins.js"}
+	%script{:src => "js/site.js"}
+
+	/[if lt IE 7 ]
+		%script{:src => "js/dd_belatedpng.js"}
+		%script DD_belatedPNG.fix('img, .png_bg');
+
+	%script
+		:plain
+			var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+			(function(d, t) {
+				var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+				g.async = true;
+				g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				s.parentNode.insertBefore(g, s);
+			 })(document, 'script');
